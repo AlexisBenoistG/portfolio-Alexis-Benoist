@@ -13,15 +13,9 @@ export default function About() {
       <h2>À propos</h2>
       <p>Je suis un développeur passionné...</p>
       <motion.div
-        variants={containerStagger}
         initial="hidden"
         whileInView="show"
       >
-        {projects.map((p) => (
-          <motion.div key={p.title} variants={itemFade}>
-            <h3>{p.title}</h3>
-          </motion.div>
-        ))}
       </motion.div>
     </motion.section>
   );
