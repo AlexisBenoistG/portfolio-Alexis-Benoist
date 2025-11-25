@@ -1,22 +1,21 @@
 # Dockerfile
 FROM quay.io/keycloak/keycloak:21.1.1
 
-# Configuration Render (Proxy)
+# 1. Copie du fichier de configuration du realm dans l'image
+COPY portfolio-realm.json /opt/keycloak/data/import/
+
+# 2. Keycloak va automatiquement importer tous les .json
+# trouvés dans ce dossier au premier démarrage.
+
+# Configuration Render (Proxy, Hostname)
 ENV KC_PROXY=edge
 ENV KC_HOSTNAME=portfolio-alexis-benoist.onrender.com
-ENV KC_HOSTNAME_STRICT=false
-ENV KC_HTTP_ENABLED=true
-ENV KC_HTTP_HOST=0.0.0.0
+# ... autres variables (KC_HTTP_HOST=0.0.0.0, KC_HTTP_PORT=8081, timeouts) ...
 
-# --- CONFIGURATION DU PORT 8081 ---
-# On dit à Keycloak d'écouter sur le 8081
-ENV KC_HTTP_PORT=8081
-# On documente que le conteneur ouvre le 8081
-EXPOSE 8081
-# ----------------------------------
-ENV KC_DB_POOL_MAX_WAIT_MILLIS=15000
-# S'assurer qu'il y a un pool initial
-ENV KC_DB_POOL_INITIAL_SIZE=5
+# Admin credentials
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=DPDragonfly09#k
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+# On garde start-dev, mais maintenant il va importer le realm au démarrage
 CMD ["start-dev"]
