@@ -6,6 +6,7 @@ ENV KC_PROXY=edge
 ENV KC_HOSTNAME=portfolio-alexis-benoist.onrender.com
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HTTP_ENABLED=true
+ENV KC_HTTP_HOST=0.0.0.0
 
 # --- CONFIGURATION DU PORT 8081 ---
 # On dit à Keycloak d'écouter sur le 8081
