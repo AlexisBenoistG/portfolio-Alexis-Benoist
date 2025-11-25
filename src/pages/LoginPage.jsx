@@ -26,7 +26,7 @@ export default function LoginPage() {
           <a
             href="#"
             className="text-sky-500 hover:underline"
-            onClick={() => login({ action: "register" })} // redirection Keycloak vers registre
+            onClick={() => login({ action: "register" })}
           >
             S’inscrire
           </a>

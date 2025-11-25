@@ -4,7 +4,11 @@ import App from './App.jsx'
 import './styles/globals.css';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <React.StrictMode>
+    <BrowserRouter> 
+      <AuthProvider>
+        <App /> 
+      </AuthProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
 )

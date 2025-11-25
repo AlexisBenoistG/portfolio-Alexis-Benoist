@@ -30,12 +30,14 @@ function App() {
             }
           /> */}
 
-        <AuthProvider>
-          <Route
-            path="/portfolio-Alexis-Benoist/contact"
-            element={<Contact />}
-          />
-        </AuthProvider>
+        <Route
+          path="/portfolio-Alexis-Benoist/contact"
+          element={
+            <ProtectedRoute requiredRoles={["admin"]}>
+              <Contact />
+            </ProtectedRoute>
+          }
+        />
         {/* <Route
             path="/admin"
             element={
