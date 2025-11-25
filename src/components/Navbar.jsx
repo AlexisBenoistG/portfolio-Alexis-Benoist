@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
 import Button from "./Button.jsx";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar bg-gray-100 dark:bg-gray-900 p-4 flex justify-between items-center">
-      <ul className="hidden md:flex gap-6">
-        <Button to="#myName">Accueil</Button>
-        <Button to="#about">À propos</Button>
-        <Button to="#projects">Projets</Button>
-        <Button to="#contact">Contact</Button>
-      </ul>
+    <nav className="navbar fixed top-0 left-50 right-50 w-30% items-center bg-zinc-900/40 backdrop-blur-lg 
+                    border-b border-zinc-800 p-4 flex justify-center z-50 shadow-lg rounded">
+      <div className="hidden md:flex gap-6">
+        <Button to="/portfolio-Alexis-Benoist/login">Se connecter/S'inscrire</Button>
+        <Button to="/portfolio-Alexis-Benoist/">Accueil</Button>
+        <Button to="/portfolio-Alexis-Benoist/about">À propos</Button>
+        <Button to="/portfolio-Alexis-Benoist/projects">Projets</Button>
+        <Button to="/portfolio-Alexis-Benoist/contact">Contact</Button>
+      </div>
     </nav>
   );
 }
