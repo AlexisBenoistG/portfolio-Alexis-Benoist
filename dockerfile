@@ -14,10 +14,9 @@ ENV KC_HTTP_PORT=8081
 # On documente que le conteneur ouvre le 8081
 EXPOSE 8081
 # ----------------------------------
-
-# Admin credentials
-ENV KEYCLOAK_ADMIN=admin
-ENV KEYCLOAK_ADMIN_PASSWORD=DPDragonfly09#k
+ENV KC_DB_POOL_MAX_WAIT_MILLIS=15000
+# S'assurer qu'il y a un pool initial
+ENV KC_DB_POOL_INITIAL_SIZE=5
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 CMD ["start-dev"]
