@@ -13,7 +13,7 @@ ENV KC_HTTP_PORT=8081
 # 3. Documente le port ouvert
 EXPOSE 8081
 # --------------------------------------------
-
+COPY portfolio-realm.json /opt/keycloak/data/import/
 # --- CONFIGURATION DU PROXY (HTTPS) ---
 ENV KC_PROXY=edge
 ENV KC_HOSTNAME=portfolio-alexis-benoist.onrender.com
