@@ -12,14 +12,16 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
-        <Navbar />
-        <Routes>
-          <Route path="/portfolio-Alexis-Benoist/" element={<Home />} />
-          <Route path="/portfolio-Alexis-Benoist/login" element={<LoginPage />} />
-          <Route path="/portfolio-Alexis-Benoist/about" element={<About />} />          
-          <Route path="/portfolio-Alexis-Benoist/projects" element={<Projects />} />
-          {/* <Route
+      <Navbar />
+      <Routes>
+        <Route path="/portfolio-Alexis-Benoist/" element={<Home />} />
+        <Route path="/portfolio-Alexis-Benoist/login" element={<LoginPage />} />
+        <Route path="/portfolio-Alexis-Benoist/about" element={<About />} />
+        <Route
+          path="/portfolio-Alexis-Benoist/projects"
+          element={<Projects />}
+        />
+        {/* <Route
             path="/portfolio-Alexis-Benoist/projects"
             element={
               <ProtectedRoute requiredRoles={["ROLE_USER"]}>
@@ -27,12 +29,14 @@ function App() {
               </ProtectedRoute>
             }
           /> */}
+
+        <AuthProvider>
           <Route
             path="/portfolio-Alexis-Benoist/contact"
             element={<Contact />}
           />
-
-          {/* <Route
+        </AuthProvider>
+        {/* <Route
             path="/admin"
             element={
               <ProtectedRoute requiredRoles={["ROLE_ADMIN"]}>
@@ -40,9 +44,8 @@ function App() {
               </ProtectedRoute>
             }
           /> */}
-        </Routes>
-        <Footer />
-      </AuthProvider>
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
