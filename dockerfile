@@ -1,9 +1,6 @@
 # Dockerfile
 FROM quay.io/keycloak/keycloak:21.1.1
 
-# 1. Copie du fichier de configuration du realm dans l'image
-COPY portfolio-realm.json /opt/keycloak/data/import/
-
 # 2. Keycloak va automatiquement importer tous les .json
 # trouvés dans ce dossier au premier démarrage.
 
