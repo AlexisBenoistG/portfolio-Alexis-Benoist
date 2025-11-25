@@ -1,8 +1,10 @@
-# Dockerfile pour Keycloak
+# Dockerfile
 FROM quay.io/keycloak/keycloak:21.1.1
 
-# Mettre en mode dev
+# Défini le mode de démarrage
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
 CMD ["start-dev"]
 
-# Optionnel : exposer le port 8080 (par défaut Keycloak)
-EXPOSE 8080
+# Variables d'environnement admin
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=DPDragonfly09#k
