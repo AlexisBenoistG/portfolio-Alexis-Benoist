@@ -22,9 +22,10 @@ export function AuthProvider({ children }) {
 
     keycloak
       .init({
-        onLoad: "login-required", // force la connexion, pas de check-sso
+        onLoad: "login-required", // ou "check-sso" si tu veux pas forcer login
         pkceMethod: "S256",
         promiseType: "native",
+        checkLoginIframe: false, // ✅ <-- désactive le check iframe
       })
       .then((auth) => {
         setKc(keycloak);
