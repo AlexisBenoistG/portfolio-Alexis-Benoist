@@ -49,7 +49,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-5xl mx-auto mt-32 mb-40 px-6 py-10 
+      className="max-w-5xl mx-auto mt-32 px-6 py-10 
                  bg-card backdrop-blur-md rounded-2xl
                  border border-theme shadow-xl"
     >

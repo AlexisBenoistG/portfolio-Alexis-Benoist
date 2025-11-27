@@ -1,5 +1,4 @@
 import Button from "./Button.jsx";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
