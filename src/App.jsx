@@ -1,51 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./auth/AuthProvider";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import LoginPage from "./pages/LoginPage";
-import ProtectedRoute from "./auth/ProtectedRoute";
+import ContactPage from "./pages/Contact";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
+import ProjectsPage from "./pages/Projects";
+import CompetencesPage from "./sections/Competences";
+import CVPage from "./pages/CV";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Header />
       <Routes>
-        <Route path="/portfolio-Alexis-Benoist/" element={<Home />} />
-        <Route path="/portfolio-Alexis-Benoist/login" element={<LoginPage />} />
-        <Route path="/portfolio-Alexis-Benoist/about" element={<About />} />
-        <Route
-          path="/portfolio-Alexis-Benoist/projects"
-          element={<Projects />}
-        />
-        {/* <Route
-            path="/portfolio-Alexis-Benoist/projects"
-            element={
-              <ProtectedRoute requiredRoles={["ROLE_USER"]}>
-                <Projects />
-              </ProtectedRoute>
-            }
-          /> */}
-
-        <Route
-          path="/portfolio-Alexis-Benoist/contact"
-          element={
-            <ProtectedRoute requiredRoles={["admin"]}>
-              <Contact />
-            </ProtectedRoute>
-          }
-        />
-        {/* <Route
-            path="/admin"
-            element={
-              <ProtectedRoute requiredRoles={["ROLE_ADMIN"]}>
-                <AdminPage />
-              </ProtectedRoute>
-            }
-          /> */}
+        <Route path="/portfolio-Alexis-Benoist/" element={<HomePage />} />
+        <Route path="/portfolio-Alexis-Benoist/about" element={<AboutPage />} />
+        <Route path="/portfolio-Alexis-Benoist/projects" element={<ProjectsPage />}/>
+        <Route path="/portfolio-Alexis-Benoist/competences" element={<CompetencesPage />}/>
+        <Route path="/portfolio-Alexis-Benoist/contact" element={<ContactPage />}/>
+        <Route path="/portfolio-Alexis-Benoist/cv" element={<CVPage />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
