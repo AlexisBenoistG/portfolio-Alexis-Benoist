@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-4xl mx-auto mt-32 mb-40 px-6 py-10 bg-card backdrop-blur-md 
+      className="max-w-4xl mx-auto mt-32 mb-13 px-6 py-10 bg-card backdrop-blur-md 
                  rounded-2xl border border-theme shadow-xl"
     >
       <motion.h1
@@ -47,10 +47,7 @@ export default function Projects() {
         />
 
         <div className="relative z-10">
-          {/* Icône animée */}
           <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
             className="inline-block text-6xl mb-4"
           >
             🚧
@@ -66,21 +63,7 @@ export default function Projects() {
             et liens vers les démonstrations.
           </p>
 
-          {/* Badge "Bientôt disponible" */}
-          <motion.div
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full 
-                       bg-gradient-to-r from-blue-600/20 to-purple-600/20 
-                       border border-theme text-primary font-medium"
-          >
-            <motion.span
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600"
-            />
-            Déploiement imminent
-          </motion.div>
+          
         </div>
       </motion.div>
 
@@ -128,26 +111,6 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
-      </motion.div>
-
-      {/* Message d'encouragement */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="mt-8 p-4 rounded-xl bg-card/50 border border-theme text-center"
-      >
-        <p className="text-secondary text-sm">
-          💡 En attendant, n'hésitez pas à consulter mon{" "}
-          <a href="#cv" className="text-link hover:underline">
-            CV
-          </a>
-          {" "}et mes{" "}
-          <a href="#competences" className="text-link hover:underline">
-            compétences
-          </a>
-          {" "}pour en savoir plus sur mon parcours.
-        </p>
       </motion.div>
     </section>
   );

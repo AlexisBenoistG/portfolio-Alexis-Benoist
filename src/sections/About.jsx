@@ -1,55 +1,11 @@
 import { motion } from "framer-motion";
+import { experiences, qualities, languages, introduction, internshipInfo } from "../data/aboutData";
 
 export default function About() {
-  const experiences = [
-    {
-      title: "Stage - Enedis",
-      period: "Juin 2025 - Août 2025",
-      location: "Charleville-Mézières",
-      points: [
-        "Refonte complète d'un module d'application interne (PHP, Symfony MVC)",
-        "Développement d'un système de gestion des rôles et accès",
-        "Optimisation des performances et maintenabilité du code",
-      ],
-    },
-    {
-      title: "Semestre 5 - IUT Dijon",
-      period: "2024-2025",
-      location: "Dijon",
-      points: [
-        "Développement web avec Angular et ASP.NET",
-        "Gestion de projet en méthode AGILE",
-        "Conception et modélisation de bases de données",
-      ],
-    },
-    {
-      title: "Semestre 4 - Université de Waterford",
-      period: "2024",
-      location: "Irlande",
-      points: [
-        "Développement 3D avec Unity et Maya",
-        "Modélisation 3D et animation de personnages",
-        "Création d'objets et de terrains 3D",
-      ],
-    },
-  ];
-
-  const qualities = [
-    { icon: "👥", label: "Esprit d'équipe" },
-    { icon: "💬", label: "Communication" },
-    { icon: "🎯", label: "Sens des responsabilités" },
-    { icon: "🚀", label: "Passionné" },
-  ];
-
-  const languages = [
-    { name: "Français", level: "Natif", percentage: 100 },
-    { name: "Anglais", level: "B2", percentage: 75 },
-  ];
-
   return (
     <section
       id="about"
-      className="max-w-5xl mx-auto mt-32 px-6 py-10 
+      className="max-w-5xl mx-auto mt-32 mb-13 px-6 py-10 
                  bg-card backdrop-blur-md rounded-2xl
                  border border-theme shadow-xl"
     >
@@ -60,7 +16,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-3xl font-semibold text-primary mb-4">
-          À propos de moi
+          {introduction.title}
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6"></div>
       </motion.div>
@@ -72,17 +28,19 @@ export default function About() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="space-y-4 mb-8"
       >
-        <p className="text-secondary leading-relaxed text-lg">
-          Je suis un <span className="text-primary font-medium">développeur passionné</span> en 
-          3ème année de BUT Informatique, spécialisé dans la création d'interfaces modernes, 
-          performantes et élégantes.
-        </p>
-        <p className="text-secondary leading-relaxed">
-          Avec une approche orientée design et un goût pour les animations subtiles, 
-          j'aime donner vie aux interfaces pour les rendre plus engageantes. 
-          Mon expérience combine développement front-end et back-end, avec une attention 
-          particulière portée à l'expérience utilisateur.
-        </p>
+        {introduction.paragraphs.map((paragraph, index) => (
+          <p key={index} className={`text-secondary leading-relaxed ${index === 0 ? 'text-lg' : ''}`}>
+            {index === 0 ? (
+              <>
+                Je suis un{" "}
+                <span className="text-primary font-medium">développeur passionné</span>{" "}
+                {paragraph.slice(22)}
+              </>
+            ) : (
+              paragraph
+            )}
+          </p>
+        ))}
       </motion.div>
 
       {/* Qualités */}
@@ -101,11 +59,13 @@ export default function About() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 + index * 0.1 }}
               className="flex flex-col items-center gap-2 p-4 rounded-2xl gradient-hover
-                          border border-theme hover:border-none
+                         border border-theme hover:border-none
                          transition-all duration-300 hover:scale-105"
             >
               <span className="text-3xl">{quality.icon}</span>
-              <span className="text-sm text-secondary text-center">{quality.label}</span>
+              <span className="text-sm text-secondary text-center">
+                {quality.label}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -165,7 +125,7 @@ export default function About() {
               <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full 
                               bg-gradient-to-r from-blue-600 to-purple-600 
                               border-2 border-card"></div>
-              
+
               <div className="bg-card/30 border border-theme rounded-xl p-4 
                               hover:bg-card/50 transition-all duration-300">
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
@@ -176,9 +136,9 @@ export default function About() {
                 </div>
                 <p className="text-xs text-secondary mb-3 flex items-center gap-1">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   {exp.location}
@@ -206,11 +166,9 @@ export default function About() {
                    border border-theme text-center"
       >
         <p className="text-secondary text-sm mb-2">
-          🎓 Actuellement en recherche de stage de 14-16 semaines
+          {internshipInfo.emoji} {internshipInfo.title}
         </p>
-        <p className="text-secondary text-xs">
-          Du 16 mars au 2 juillet 2026
-        </p>
+        <p className="text-secondary text-xs">{internshipInfo.dates}</p>
       </motion.div>
     </section>
   );
