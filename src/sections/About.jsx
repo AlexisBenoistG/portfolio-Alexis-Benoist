@@ -182,10 +182,10 @@ export default function About() {
                    border border-theme text-center"
       >
         <p className="text-secondary text-sm mb-2">
-          🎓 Actuellement en recherche de stage de 14-16 semaines
+        {internshipInfo.emoji}{internshipInfo.title}
         </p>
         <p className="text-secondary text-xs">
-          Du 16 mars au 2 juillet 2026
+          {internshipInfo.dates}
         </p>
       </motion.div>
     </section>

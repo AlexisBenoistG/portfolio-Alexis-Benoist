@@ -9,7 +9,7 @@ function CategorySection({ title, skills, isOpen, onToggle }) {
       <button
         onClick={onToggle}
         className="w-full px-6 py-4 flex items-center justify-between text-left 
-                   hover:bg-white/5 transition-all duration-300 group"
+                   hover:bg-white/5 transition-all duration-300 group cursor-pointer"
       >
         <h3 className="text-xl font-semibold text-primary">{title}</h3>
         <motion.div

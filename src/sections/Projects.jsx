@@ -152,9 +152,7 @@ function ProjectCard({ project, index }) {
 export default function Projects() {
   const [filter, setFilter] = useState("all");
 
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(p => p.type === filter);
+  const filteredProjects = filter === "all" ? projects : projects.filter(p => p.type === filter);
 
   return (
     <section
