@@ -1,17 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="w-screen mt-10 bottom-0">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="mt-20 bottom-0">
+      
         <div className="flex items-center justify-center">
-          <div className="relative w-full rounded-2xl px-6 py-4 shadow-2xl shadow-slate-900/50 overflow-hidden">
+          <div className="relative w-screen px-6 py-4 shadow-2xl shadow-slate-900/50 overflow-hidden">
             {/* Effet vitre avec backdrop-blur */}
             <div className="absolute inset-0 bg-white/5 backdrop-blur-xl"></div>
 
             {/* Bordure brillante */}
-            <div className="absolute inset-0 rounded-2xl border border-white/10"></div>
+            <div className="absolute inset-0 border border-white/10"></div>
 
             {/* Reflets de lumière sur le verre */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
+            <div className="absolute inset-0  bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
 
             {/* Contenu */}
             <div className="relative z-10">
@@ -57,7 +57,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 }

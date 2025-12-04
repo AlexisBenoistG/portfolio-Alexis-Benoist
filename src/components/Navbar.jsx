@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import Button from "./Button.jsx";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -20,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center gap-1">
+      <div className="hidden md:flex items-center justify-center gap-1">
         <Button to="/portfolio-Alexis-Benoist/">Accueil</Button>
         <div className="w-px h-8 bg-slate-700 mx-2"></div>
         <Button to="/portfolio-Alexis-Benoist/about">À propos</Button>
@@ -86,8 +88,8 @@ export default function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 right-0 w-64 bg-card border-l border-theme 
-                           shadow-2xl z-50 overflow-y-auto rounded-2xl"
+                className="fixed top-0 right-0 h-full w-64 bg-card border-l border-theme 
+                           shadow-2xl z-50 overflow-y-auto rounded-l-2xl"
               >
                 <div className="flex flex-col gap-2 p-6 mt-16">
                   {menuItems.map((item, index) => (
