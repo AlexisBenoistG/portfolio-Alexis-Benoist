@@ -1,61 +1,7 @@
 import { motion } from "framer-motion";
-<<<<<<< Updated upstream
-=======
-import {
-  experiences,
-  qualities,
-  languages,
-  introduction,
-  internshipInfo,
-} from "../data/aboutData";
->>>>>>> Stashed changes
+import { experiences, qualities, languages, introduction, internshipInfo } from "../data/aboutData";
 
 export default function About() {
-  const experiences = [
-    {
-      title: "Stage - Enedis",
-      period: "Juin 2025 - Août 2025",
-      location: "Charleville-Mézières",
-      points: [
-        "Refonte complète d'un module d'application interne (PHP, Symfony MVC)",
-        "Développement d'un système de gestion des rôles et accès",
-        "Optimisation des performances et maintenabilité du code",
-      ],
-    },
-    {
-      title: "Semestre 5 - IUT Dijon",
-      period: "2024-2025",
-      location: "Dijon",
-      points: [
-        "Développement web avec Angular et ASP.NET",
-        "Gestion de projet en méthode AGILE",
-        "Conception et modélisation de bases de données",
-      ],
-    },
-    {
-      title: "Semestre 4 - Université de Waterford",
-      period: "2024",
-      location: "Irlande",
-      points: [
-        "Développement 3D avec Unity et Maya",
-        "Modélisation 3D et animation de personnages",
-        "Création d'objets et de terrains 3D",
-      ],
-    },
-  ];
-
-  const qualities = [
-    { icon: "👥", label: "Esprit d'équipe" },
-    { icon: "💬", label: "Communication" },
-    { icon: "🎯", label: "Sens des responsabilités" },
-    { icon: "🚀", label: "Passionné" },
-  ];
-
-  const languages = [
-    { name: "Français", level: "Natif", percentage: 100 },
-    { name: "Anglais", level: "B2", percentage: 75 },
-  ];
-
   return (
     <section
       id="about"
@@ -82,25 +28,11 @@ export default function About() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="space-y-4 mb-8"
       >
-<<<<<<< Updated upstream
-        <p className="text-secondary leading-relaxed text-lg">
-          Je suis un <span className="text-primary font-medium">développeur passionné</span> en 
-          3ème année de BUT Informatique, spécialisé dans la création d'interfaces modernes, 
-          performantes et élégantes.
-        </p>
-        <p className="text-secondary leading-relaxed">
-          Avec une approche orientée design et un goût pour les animations subtiles, 
-          j'aime donner vie aux interfaces pour les rendre plus engageantes. 
-          Mon expérience combine développement front-end et back-end, avec une attention 
-          particulière portée à l'expérience utilisateur.
-        </p>
-=======
         {introduction.paragraphs.map((paragraph, index) => (
           <p key={index} className={`text-secondary leading-relaxed text-lg`}>
             {paragraph}
           </p>
         ))}
->>>>>>> Stashed changes
       </motion.div>
 
       {/* Qualités */}
@@ -183,20 +115,10 @@ export default function About() {
               <div
                 className="absolute left-[-9px] top-0 w-4 h-4 rounded-full 
                               bg-gradient-to-r from-blue-600 to-purple-600 
-<<<<<<< Updated upstream
                               border-2 border-card"></div>
-              
+
               <div className="bg-card/30 border border-theme rounded-xl p-4 
                               hover:bg-card/50 transition-all duration-300">
-=======
-                              border-2 border-card"
-              ></div>
-
-              <div
-                className="bg-card/30 border border-theme rounded-xl p-4 
-                              hover:bg-card/50 transition-all duration-300"
-              >
->>>>>>> Stashed changes
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <h4 className="text-primary font-semibold">{exp.title}</h4>
                   <span className="text-xs text-secondary bg-card px-3 py-1 rounded-full border border-theme">
@@ -204,32 +126,11 @@ export default function About() {
                   </span>
                 </div>
                 <p className="text-xs text-secondary mb-3 flex items-center gap-1">
-<<<<<<< Updated upstream
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-=======
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
->>>>>>> Stashed changes
                   </svg>
                   {exp.location}
                 </p>
