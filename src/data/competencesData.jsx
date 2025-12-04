@@ -19,7 +19,7 @@ export const competencesData = {
     { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "jQuery", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" },
-    { name: "EmailJS", icon: "./public/emailJS.png"},
+    { name: "EmailJS", icon: "./emailJS.png"},
   ],
   "Bases de données": [
     { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
@@ -43,10 +43,10 @@ export const competencesData = {
     { name: "Keycloak", icon: "https://skycloak.io/wp-content/uploads/2024/11/keycloak-1.png"}
   ],
   Méthodes: [
-    { name: "AGILE", icon: './public/agile.png' },
-    { name: "Tests unitaires", icon: "./public/document.png" },
-    { name: "JWT", icon: "./public/key.png" },
-    { name: "UML", icon: "./public/diagram.png" },
-    { name: "API REST", icon: "./public/cloud-api.png" },
+    { name: "AGILE", icon: './agile.png' },
+    { name: "Tests unitaires", icon: "./document.png" },
+    { name: "JWT", icon: "./key.png" },
+    { name: "UML", icon: "./diagram.png" },
+    { name: "API REST", icon: "./cloud-api.png" },
   ],
 };
