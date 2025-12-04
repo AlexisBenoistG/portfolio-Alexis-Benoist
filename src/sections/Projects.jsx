@@ -160,7 +160,8 @@ export default function Projects() {
     <section
       id="projects"
       className="max-w-6xl mx-auto mt-32 mb-40 px-6 py-10 bg-card backdrop-blur-md 
-                 rounded-2xl border border-theme shadow-xl"    >
+                 rounded-2xl border border-theme shadow-xl"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

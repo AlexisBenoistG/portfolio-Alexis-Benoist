@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { experiences, qualities, languages, introduction, internshipInfo } from "../data/aboutData";
+import {
+  experiences,
+  qualities,
+  languages,
+  introduction,
+  internshipInfo,
+} from "../data/aboutData";
 
 export default function About() {
   return (
@@ -115,10 +121,13 @@ export default function About() {
               <div
                 className="absolute left-[-9px] top-0 w-4 h-4 rounded-full 
                               bg-gradient-to-r from-blue-600 to-purple-600 
-                              border-2 border-card"></div>
+                              border-2 border-card"
+              ></div>
 
-              <div className="bg-card/30 border border-theme rounded-xl p-4 
-                              hover:bg-card/50 transition-all duration-300">
+              <div
+                className="bg-card/30 border border-theme rounded-xl p-4 
+                              hover:bg-card/50 transition-all duration-300"
+              >
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <h4 className="text-primary font-semibold">{exp.title}</h4>
                   <span className="text-xs text-secondary bg-card px-3 py-1 rounded-full border border-theme">
@@ -126,11 +135,24 @@ export default function About() {
                   </span>
                 </div>
                 <p className="text-xs text-secondary mb-3 flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   {exp.location}
                 </p>
