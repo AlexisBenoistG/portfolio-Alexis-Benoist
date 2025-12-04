@@ -121,6 +121,7 @@ export default function MyName() {
           </motion.div>
         ))}
       </motion.div>
+<<<<<<< Updated upstream
 
       {/* CTA */}
       <motion.div
@@ -165,6 +166,8 @@ export default function MyName() {
           </svg>
         </motion.div>
       </motion.div>
+=======
+>>>>>>> Stashed changes
     </section>
   );
 }

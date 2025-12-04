@@ -1,4 +1,14 @@
 import { motion } from "framer-motion";
+<<<<<<< Updated upstream
+=======
+import {
+  experiences,
+  qualities,
+  languages,
+  introduction,
+  internshipInfo,
+} from "../data/aboutData";
+>>>>>>> Stashed changes
 
 export default function About() {
   const experiences = [
@@ -72,6 +82,7 @@ export default function About() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="space-y-4 mb-8"
       >
+<<<<<<< Updated upstream
         <p className="text-secondary leading-relaxed text-lg">
           Je suis un <span className="text-primary font-medium">développeur passionné</span> en 
           3ème année de BUT Informatique, spécialisé dans la création d'interfaces modernes, 
@@ -83,6 +94,13 @@ export default function About() {
           Mon expérience combine développement front-end et back-end, avec une attention 
           particulière portée à l'expérience utilisateur.
         </p>
+=======
+        {introduction.paragraphs.map((paragraph, index) => (
+          <p key={index} className={`text-secondary leading-relaxed text-lg`}>
+            {paragraph}
+          </p>
+        ))}
+>>>>>>> Stashed changes
       </motion.div>
 
       {/* Qualités */}
@@ -162,12 +180,23 @@ export default function About() {
               className="relative pl-8 pb-6 border-l-2 border-theme last:pb-0"
             >
               {/* Point sur la timeline */}
-              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full 
+              <div
+                className="absolute left-[-9px] top-0 w-4 h-4 rounded-full 
                               bg-gradient-to-r from-blue-600 to-purple-600 
+<<<<<<< Updated upstream
                               border-2 border-card"></div>
               
               <div className="bg-card/30 border border-theme rounded-xl p-4 
                               hover:bg-card/50 transition-all duration-300">
+=======
+                              border-2 border-card"
+              ></div>
+
+              <div
+                className="bg-card/30 border border-theme rounded-xl p-4 
+                              hover:bg-card/50 transition-all duration-300"
+              >
+>>>>>>> Stashed changes
                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                   <h4 className="text-primary font-semibold">{exp.title}</h4>
                   <span className="text-xs text-secondary bg-card px-3 py-1 rounded-full border border-theme">
@@ -175,17 +204,41 @@ export default function About() {
                   </span>
                 </div>
                 <p className="text-xs text-secondary mb-3 flex items-center gap-1">
+<<<<<<< Updated upstream
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                           d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+=======
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+>>>>>>> Stashed changes
                   </svg>
                   {exp.location}
                 </p>
                 <ul className="space-y-2">
                   {exp.points.map((point, i) => (
-                    <li key={i} className="text-sm text-secondary flex items-start gap-2">
+                    <li
+                      key={i}
+                      className="text-sm text-secondary flex items-start gap-2"
+                    >
                       <span className="text-link mt-1">•</span>
                       <span className="flex-1">{point}</span>
                     </li>
