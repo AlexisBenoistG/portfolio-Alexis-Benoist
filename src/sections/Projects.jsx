@@ -201,6 +201,7 @@ export default function Projects() {
           <p className="text-secondary">Aucun projet dans cette catégorie pour le moment.</p>
         </div>
       )}
+
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {highlights, stats, profileInfo} from "../data/myNameData";
+import { highlights, stats, profileInfo } from "../data/myNameData";
 
 export default function MyName() {
   return (
@@ -26,7 +26,7 @@ export default function MyName() {
       >
         <img
           src={profileInfo.photo}
-          alt="Photo de Alexis Benoist"
+          alt={`Photo de ${profileInfo.name}`}
           className="w-48 h-48 md:w-60 md:h-60 shadow-2xl rounded-full border-2 border-theme flex-shrink-0 object-cover"
         />
         <motion.p

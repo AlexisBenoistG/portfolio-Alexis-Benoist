@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import {
   experiences,
   qualities,
@@ -11,7 +12,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-5xl mx-auto mt-32 px-6 py-10 
+      className="max-w-5xl mx-auto mt-32 mb-13 px-6 py-10 
                  bg-card backdrop-blur-md rounded-2xl
                  border border-theme shadow-xl"
     >
@@ -22,7 +23,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-3xl font-semibold text-primary mb-4">
-          À propos de moi
+          {introduction.title}
         </h1>
         <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6"></div>
       </motion.div>
@@ -57,11 +58,13 @@ export default function About() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 + index * 0.1 }}
               className="flex flex-col items-center gap-2 p-4 rounded-2xl gradient-hover
-                          border border-theme hover:border-none
+                         border border-theme hover:border-none
                          transition-all duration-300 hover:scale-105"
             >
               <span className="text-3xl">{quality.icon}</span>
-              <span className="text-sm text-secondary text-center">{quality.label}</span>
+              <span className="text-sm text-secondary text-center">
+                {quality.label}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -184,9 +187,7 @@ export default function About() {
         <p className="text-secondary text-sm mb-2">
         {internshipInfo.emoji}{internshipInfo.title}
         </p>
-        <p className="text-secondary text-xs">
-          {internshipInfo.dates}
-        </p>
+        <p className="text-secondary text-xs">{internshipInfo.dates}</p>
       </motion.div>
     </section>
   );

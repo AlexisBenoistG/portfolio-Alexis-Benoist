@@ -119,6 +119,7 @@ export const introduction = {
   title: "À propos de moi",
   paragraphs: [
     "Je suis en 3ème année de BUT Informatique à Dijon. J'ai travaillé sur du développement web en contexte scolaire (Angular, ASP.NET) et en stage (Symfony). J'ai aussi des bases en réseaux et systèmes, et j'aimerais progresser dans ce domaine."  
+
   ],
 };
 

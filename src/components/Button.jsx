@@ -18,8 +18,8 @@ export default function Button({ to = "#", children, onClick }) {
                    rounded-2xl transition-all duration-300 relative overflow-hidden
                    w-full md:w-auto
                    ${isActive 
-                     ? 'text-secondary hover:text-primary' 
-                     : 'text-primary hover:text-secondary'}`}
+                     ? 'text-white' 
+                     : 'text-primary hover:text-link-hover'}`}
       >
         <span className="relative z-10">{children}</span>
         

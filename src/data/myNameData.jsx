@@ -91,4 +91,5 @@ export const profileInfo = {
   name: "Alexis Benoist",
   photo: "./Moi.jpg",
   description: "Étudiant en 3ème année BUT Informatique avec une bonne base en développement web (Symfony, Angular, React). Je suis actuellement en 3ème année de BUT Informatique à Dijon. Je cherche à approfondir mes compétences en réseaux, mais je serais aussi intéressé à faire un stage en développement web full stack."
+
 };
