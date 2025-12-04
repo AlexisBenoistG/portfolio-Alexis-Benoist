@@ -27,8 +27,7 @@ export default function Button({ to = "#", children, onClick }) {
         {isActive && (
           <motion.span
             layoutId="activeTab"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 
-                       bg-white rounded-full"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-slate-500 rounded-full"
             initial={false}
           />
         )}

@@ -118,8 +118,8 @@ export const languages = [
 export const introduction = {
   title: "À propos de moi",
   paragraphs: [
-    "Je suis un développeur passionné en 3ème année de BUT Informatique, spécialisé dans la création d'interfaces modernes, performantes et élégantes.",
-    "Avec une approche orientée design et un goût pour les animations subtiles, j'aime donner vie aux interfaces pour les rendre plus engageantes. Mon expérience combine développement front-end et back-end, avec une attention particulière portée à l'expérience utilisateur.",
+    "Je suis en 3ème année de BUT Informatique à Dijon. J'ai travaillé sur du développement web en contexte scolaire (Angular, ASP.NET) et en stage (Symfony). J'ai aussi des bases en réseaux et systèmes, et j'aimerais progresser dans ce domaine."  
+
   ],
 };
 

@@ -91,31 +91,6 @@ export default function MyName() {
           </motion.div>
         ))}
       </motion.div>
-
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        className="mt-12 flex flex-col sm:flex-row gap-4"
-      >
-        <a
-          href="/portfolio-Alexis-Benoist/contact"
-          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 
-                     text-white rounded-xl font-medium shadow-lg
-                     hover:shadow-xl hover:scale-105 transition-all duration-300"
-        >
-          Me contacter
-        </a>
-        <a
-          href="/portfolio-Alexis-Benoist/about"
-          className="px-8 py-3 bg-card border border-theme text-primary rounded-xl 
-                     font-medium hover:border-white/20 hover:scale-105 
-                     transition-all duration-300"
-        >
-          En savoir plus
-        </a>
-      </motion.div>
     </section>
   );
 }

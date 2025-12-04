@@ -48,7 +48,7 @@ export const contactInfo = [
 
 export const pageContent = {
   title: "Contactez-moi",
-  description: "N'hésitez pas à me contacter pour discuter d'un projet, d'une collaboration ou d'une opportunité professionnelle. Je suis toujours ouvert aux nouvelles opportunités et échanges !",
+  description: "N'hésitez pas à me contacter ",
   internship: {
     emoji: "🎓",
     title: "Actuellement en recherche de stage de 14-16 semaines",

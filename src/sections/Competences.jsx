@@ -1,4 +1,4 @@
-import { competencesData } from "../data/competences";
+import { competencesData } from "../data/competencesData";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
@@ -9,7 +9,7 @@ function CategorySection({ title, skills, isOpen, onToggle }) {
       <button
         onClick={onToggle}
         className="w-full px-6 py-4 flex items-center justify-between text-left 
-                   hover:bg-white/5 transition-all duration-300 group"
+                   hover:bg-white/5 transition-all duration-300 group cursor-pointer"
       >
         <h3 className="text-xl font-semibold text-primary">{title}</h3>
         <motion.div
@@ -54,11 +54,11 @@ function CategorySection({ title, skills, isOpen, onToggle }) {
                          transition-all duration-300 hover:scale-105"
                 >
                   <div className="w-12 h-12 flex items-center justify-center">
-                    {skill.icon.startsWith("http") ? (
+                    {skill.icon.startsWith("http") || skill.icon.startsWith("./") ? (
                       <img
                         src={skill.icon}
                         alt={skill.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full"
                       />
                     ) : (
                       <span className="text-3xl">{skill.icon}</span>

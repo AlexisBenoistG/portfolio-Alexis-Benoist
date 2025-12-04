@@ -77,7 +77,7 @@ export const highlights = [
       </svg>
     ),
     title: "En recherche de stage",
-    description: "14-16 semaines | Mars - Juillet 2026",
+    description: "14-16 semaines | 16 Mars - 2 Juillet 2026",
   },
 ];
 
@@ -90,5 +90,6 @@ export const stats = [
 export const profileInfo = {
   name: "Alexis Benoist",
   photo: "./Moi.jpg",
-  description: "Développeur front-end passionné par la création d'expériences fluides et élégantes. Spécialisé en React, Angular et développement full-stack avec une approche centrée sur l'utilisateur.",
+  description: "Étudiant en 3ème année BUT Informatique avec une bonne base en développement web (Symfony, Angular, React). Je suis actuellement en 3ème année de BUT Informatique à Dijon. Je cherche à approfondir mes compétences en réseaux, mais je serais aussi intéressé à faire un stage en développement web full stack."
+
 };
