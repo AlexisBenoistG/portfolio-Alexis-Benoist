@@ -182,12 +182,16 @@ export default function About() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 
-                   border border-theme text-center"
+             border border-theme text-center relative"
       >
-        <p className="text-secondary text-sm mb-2">
-        {internshipInfo.emoji}{internshipInfo.title}
-        </p>
-        <p className="text-secondary text-xs">{internshipInfo.dates}</p>
+        <span className="absolute left-6 top-1/2 -translate-y-1/2 text-2xl">
+          {internshipInfo.emoji}
+        </span>
+
+        <div className="flex-1">
+          <p className="text-secondary text-sm mb-2">{internshipInfo.title}</p>
+          <p className="text-secondary text-xs">{internshipInfo.dates}</p>
+        </div>
       </motion.div>
     </section>
   );

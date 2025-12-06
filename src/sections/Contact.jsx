@@ -17,7 +17,7 @@ export default function Contact() {
         <h1 className="text-3xl font-semibold text-primary mb-4">
           {pageContent.title}
         </h1>
-        
+
         <p className="text-secondary leading-relaxed mb-8">
           {pageContent.description}
         </p>
@@ -27,7 +27,7 @@ export default function Contact() {
         {contactInfo.map((info, index) => {
           const isClickable = info.href !== undefined;
           const Component = isClickable ? motion.a : motion.div;
-          
+
           return (
             <Component
               key={info.label}
@@ -40,41 +40,51 @@ export default function Contact() {
               className={`group relative overflow-hidden rounded-xl border border-theme 
                          bg-card/50 p-6 transition-all duration-300 
                          hover:border-white/20 hover:bg-card hover:scale-105 
-                         ${!isClickable ? 'cursor-not-allowed' : ''}`}
+                         ${!isClickable ? "cursor-not-allowed" : ""}`}
             >
               {/* Effet de fond au hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-purple-600/0 
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-purple-600/0 
                               group-hover:from-blue-600/10 group-hover:to-purple-600/10 
-                              transition-all duration-300"></div>
-              
+                              transition-all duration-300"
+              ></div>
+
               <div className="relative flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-card border border-theme
+                <div
+                  className="flex-shrink-0 w-12 h-12 rounded-lg bg-card border border-theme
                                 flex items-center justify-center text-primary
-                                group-hover:scale-110 transition-transform duration-300">
+                                group-hover:scale-110 transition-transform duration-300"
+                >
                   {info.icon}
                 </div>
-                
+
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-secondary mb-1">
                     {info.label}
                   </p>
-                  <p className="text-primary font-medium group-hover:text-link 
-                                transition-colors duration-300 break-words">
+                  <p
+                    className="text-primary font-medium group-hover:text-link 
+                                transition-colors duration-300 break-words"
+                  >
                     {info.value}
                   </p>
                 </div>
 
                 {/* Icône de lien externe */}
                 {info.type === "external" && (
-                  <svg 
+                  <svg
                     className="w-5 h-5 text-secondary opacity-0 group-hover:opacity-100 
-                               transition-opacity duration-300 flex-shrink-0" 
-                    fill="none" 
-                    stroke="currentColor" 
+                               transition-opacity duration-300 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
                   </svg>
                 )}
               </div>
@@ -89,14 +99,20 @@ export default function Contact() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
         className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-600/10 to-purple-600/10 
-                   border border-theme text-center"
+             border border-theme text-center relative"
       >
-        <p className="text-secondary text-sm mb-2">
-          {pageContent.internship.emoji} {pageContent.internship.title}
-        </p>
-        <p className="text-secondary text-xs">
-          {pageContent.internship.dates}
-        </p>
+        <span className="absolute left-6 top-1/2 -translate-y-1/2 text-2xl">
+          {pageContent.internship.emoji}
+        </span>
+
+        <div className="flex-1">
+          <p className="text-secondary text-sm mb-2">
+            {pageContent.internship.title}
+          </p>
+          <p className="text-secondary text-xs">
+            {pageContent.internship.dates}
+          </p>
+        </div>
       </motion.div>
     </section>
   );
