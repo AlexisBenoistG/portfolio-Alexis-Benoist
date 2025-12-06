@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-20 bottom-0">
+    <footer className="mt-auto">
       
         <div className="flex items-center justify-center">
           <div className="relative w-screen px-6 py-4 shadow-2xl shadow-slate-900/50 overflow-hidden">

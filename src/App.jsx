@@ -11,16 +11,20 @@ import CVPage from "./pages/CV";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/portfolio-Alexis-Benoist/" element={<HomePage />} />
-        <Route path="/portfolio-Alexis-Benoist/about" element={<AboutPage />} />
-        <Route path="/portfolio-Alexis-Benoist/projects" element={<ProjectsPage />}/>
-        <Route path="/portfolio-Alexis-Benoist/competences" element={<CompetencesPage />}/>
-        <Route path="/portfolio-Alexis-Benoist/contact" element={<ContactPage />}/>
-        <Route path="/portfolio-Alexis-Benoist/cv" element={<CVPage />}/>
-      </Routes>
-      <Footer />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/portfolio-Alexis-Benoist/" element={<HomePage />} />
+            <Route path="/portfolio-Alexis-Benoist/about" element={<AboutPage />} />
+            <Route path="/portfolio-Alexis-Benoist/projects" element={<ProjectsPage />}/>
+            <Route path="/portfolio-Alexis-Benoist/competences" element={<CompetencesPage />}/>
+            <Route path="/portfolio-Alexis-Benoist/contact" element={<ContactPage />}/>
+            <Route path="/portfolio-Alexis-Benoist/cv" element={<CVPage />}/>
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
