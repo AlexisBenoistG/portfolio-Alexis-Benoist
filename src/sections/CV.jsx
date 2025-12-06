@@ -28,7 +28,7 @@ export default function CV() {
   return (
     <section
       id="cv"
-      className="max-w-5xl mx-auto mt-32 px-6 py-10
+      className="max-w-5xl mx-auto mb-10 mt-32 px-6 py-10
                  bg-card backdrop-blur-md rounded-2xl
                  border border-theme shadow-xl"
     >

@@ -98,7 +98,7 @@ export default function Competences() {
       id="competences"
       className="max-w-5xl mx-auto mt-32 px-6 py-10 
                  bg-card backdrop-blur-md rounded-2xl
-                 border border-theme shadow-xl"
+                 border border-theme shadow-xl  mb-10"
     >
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
